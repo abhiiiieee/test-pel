@@ -713,19 +713,10 @@ if (!cleverTapLoaded) {
     (function () {
       var originalEventPush = Array.prototype.push;
       clevertap.event.push = function (eventObj) {
-        var scriptUrl = "https://www.practostatic.com/pel/clevertap/a.js";
-        if (
-          eventObj &&
-          eventObj.eventName === "Doctor Profile Viewed" &&
-          eventObj.namespace === "Search"
-        ) {
-          scriptUrl =
-            "https://www.practostatic.com/pel/clevertap/clevertap.min.js";
-        }
         var wzrk = document.createElement("script");
         wzrk.type = "text/javascript";
         wzrk.async = !0;
-        wzrk.src = scriptUrl;
+        wzrk.src = "https://www.practostatic.com/pel/clevertap/clevertap.min.js";
         var s = document.getElementsByTagName("script")[0];
         s.parentNode.insertBefore(wzrk, s);
         return originalEventPush.apply(this, arguments);
