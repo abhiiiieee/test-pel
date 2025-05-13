@@ -707,7 +707,7 @@ if (!cleverTapLoaded) {
     region: "in",
     privacy: [],
   };
-  clevertap.account.push({ id: "8W6-695-WK5Z" }),
+  clevertap.account.push({ id: "TEST-R9K-555-6R7Z" }),
     clevertap.privacy.push({ optOut: !1 }),
     clevertap.privacy.push({ useIP: !0 }),
     (function () {
