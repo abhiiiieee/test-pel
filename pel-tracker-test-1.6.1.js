@@ -138,7 +138,7 @@ function getPlatformInfo(e) {
         }
     }),
     t && ((r.namespace = this.namespace), (r.version = this.version)),
-    (r.PelVersion = "1.6.8"),
+    (r.PelVersion = "1.6.9"),
     r
   );
 }),
@@ -711,16 +711,12 @@ if (!cleverTapLoaded) {
     clevertap.privacy.push({ optOut: !1 }),
     clevertap.privacy.push({ useIP: !0 }),
     (function () {
-      var originalEventPush = Array.prototype.push;
-      clevertap.event.push = function (eventObj) {
-        var wzrk = document.createElement("script");
-        wzrk.type = "text/javascript";
-        wzrk.async = !0;
-        wzrk.src = "https://www.practostatic.com/pel/clevertap/clevertap.min.js";
-        var s = document.getElementsByTagName("script")[0];
-        s.parentNode.insertBefore(wzrk, s);
-        return originalEventPush.apply(this, arguments);
-      };
+      var e = document.createElement("script");
+      (e.type = "text/javascript"),
+        (e.async = !0),
+        (e.src = "https://www.practostatic.com/pel/clevertap/clevertap.min.js");
+      var a = document.getElementsByTagName("script")[0];
+      a.parentNode.insertBefore(e, a);
     })(),
     (cleverTapLoaded = !0);
 }
@@ -762,7 +758,7 @@ function getItemFromPELStore(e) {
     : null;
 }
 function storeCookie(e, r) {
-  document.cookie = e + "=" + r + ";domain=.practo.com;path=/";
+  document.cookie = e + "=" + r + ";path=/";
 }
 function readCookie(e) {
   return document.cookie.length > 0 &&
